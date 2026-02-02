@@ -3,9 +3,15 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding: 50px;
+    margin: 0;
 }
 
-.container img {
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.center-img {
     width: 300px;
     height: auto;
     border-radius: 15px;
@@ -17,13 +23,14 @@ h1 {
     color: #ff4d6d;
 }
 
-p {
-    font-size: 24px;
-    color: #ff1a3c;
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
 }
 
 .btn {
-    display: inline-block;
     padding: 15px 30px;
     background-color: #ff4d6d;
     color: white;
@@ -31,8 +38,15 @@ p {
     font-size: 20px;
     border-radius: 10px;
     transition: 0.3s;
+    cursor: pointer;
+    position: relative; /* needed for "No" button movement */
 }
 
 .btn:hover {
     background-color: #ff1a3c;
+}
+
+#no-btn {
+    position: absolute;
+    right: 0;
 }
