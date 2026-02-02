@@ -23,11 +23,13 @@ h1 {
     color: #ff4d6d;
 }
 
+/* NEW: container for buttons */
 .button-container {
+    position: relative; /* needed for No button movement */
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    position: relative;
+    height: 60px; /* enough for vertical movement */
 }
 
 .btn {
@@ -39,14 +41,17 @@ h1 {
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
-    position: relative; /* needed for "No" button movement */
+    position: relative; /* for transform to work */
 }
 
 .btn:hover {
     background-color: #ff1a3c;
 }
 
+/* specific for No button */
 #no-btn {
     position: absolute;
-    right: 0;
+    top: 0;
+    left: 50%; /* starting position */
+    transform: translate(0, 0);
 }
