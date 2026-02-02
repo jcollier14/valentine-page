@@ -5,20 +5,20 @@ function moveNoButton() {
     const containerRect = container.getBoundingClientRect();
     const btnRect = noBtn.getBoundingClientRect();
 
-    // Calculate max possible X and Y inside the container
+    // Max X and Y so button stays inside container
     const maxX = containerRect.width - btnRect.width;
     const maxY = containerRect.height - btnRect.height;
 
-    // Random positions within the bounds
+    // Random positions inside bounds
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
-    // Move the button
+    // Move button
     noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
 
-// Desktop: move button on hover
+// Desktop hover
 noBtn.addEventListener('mouseenter', moveNoButton);
 
-// Mobile: move button on touch
+// Mobile touch
 noBtn.addEventListener('touchstart', moveNoButton);
