@@ -32,26 +32,26 @@ p {
 .button-container {
     position: relative;
     margin-top: 30px;
-    height: 100px;         /* enough for vertical movement */
+    height: 100px;       /* enough for vertical movement */
     width: 100%;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    align-items: center;    /* vertical centering of buttons */
-    justify-content: space-between; /* Yes left, No right */
 }
 
 #yes-btn {
-    position: relative;     /* keep Yes in normal flow */
-}
-
-#no-btn {
-    position: absolute;     /* allow No to move */
-    top: 50%;               /* start vertically centered */
+    position: absolute;
+    left: 20px;          /* inset from left edge */
+    top: 50%;
     transform: translateY(-50%);
 }
 
+#no-btn {
+    position: absolute;
+    right: 20px;         /* inset from right edge */
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .btn {
     padding: 15px 30px;
@@ -67,4 +67,5 @@ p {
 .btn:hover {
     background-color: #ff1a3c;
 }
+
 
