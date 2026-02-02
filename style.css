@@ -1,74 +1,70 @@
 body {
-    background-color: #ffe6e6;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    padding: 50px;
-    margin: 0;
+  background-color: #ffe6e6;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 50px 10px;
 }
 
 .container {
-    max-width: 500px;
-    margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .center-img {
-    width: 300px;
-    height: auto;
-    border-radius: 15px;
-    margin: 20px 0;
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  margin: 20px 0;
 }
 
 h1 {
-    font-size: 40px;
-    color: #ff4d6d;
+  font-size: 40px;
+  color: #ff4d6d;
 }
 
 p {
-    font-size: 24px;
-    color: #ff1a3c;
+  font-size: 24px;
+  color: #ff1a3c;
 }
 
-/* Button container */
+/* Buttons container */
 .button-container {
-    position: relative;        /* container for No button movement */
-    display: flex;             /* flex for Yes button */
-    align-items: center;       /* vertical centering */
-    justify-content: flex-start; /* start from left, not spaced to edges */
-    padding: 0 20px;           /* inset both sides for visual balance */
-    margin-top: 30px;
-    height: 100px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;          /* for No button absolute positioning */
+  margin-top: 30px;
+  height: 80px;                /* enough space for vertical movement */
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;         /* vertical centering */
+  justify-content: flex-start; /* Yes stays on left */
+  padding: 0 20px;             /* padding to inset Yes button */
 }
 
 #yes-btn {
-    position: relative;        /* stays in flow, flex will handle positioning */
-    margin-right: auto;        /* pushes No away */
+  position: relative;          /* stays in flex flow */
 }
 
 #no-btn {
-    position: absolute;        /* allows JS to move it freely */
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
+  position: absolute;          /* No moves freely */
+  top: 50%;
+  left: 50%;                   /* initial position */
+  transform: translate(-50%, -50%);
 }
 
 .btn {
-    padding: 15px 30px;
-    background-color: #ff4d6d;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 15px 30px;
+  background-color: #ff4d6d;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
 
 .btn:hover {
-    background-color: #ff1a3c;
+  background-color: #ff1a3c;
 }
-
-
-
