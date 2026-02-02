@@ -1,20 +1,21 @@
 const noBtn = document.getElementById('no-btn');
+const container = noBtn.parentElement;
 
 function moveNoButton() {
-    const container = noBtn.parentElement;
     const containerRect = container.getBoundingClientRect();
     const btnRect = noBtn.getBoundingClientRect();
 
-    // Max X and Y so button stays inside container
+    // Maximum positions inside container
     const maxX = containerRect.width - btnRect.width;
     const maxY = containerRect.height - btnRect.height;
 
-    // Random positions inside bounds
+    // Random X and Y positions
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
-    // Move button
-    noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    // Move No button
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
 }
 
 // Desktop hover
