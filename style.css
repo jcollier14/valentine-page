@@ -23,13 +23,36 @@ h1 {
     color: #ff4d6d;
 }
 
-/* NEW: container for buttons */
+p {
+    font-size: 24px;
+    color: #ff1a3c;
+}
+
+/* Button container */
 .button-container {
-    position: relative; /* needed for No button movement */
-    display: flex;
-    justify-content: space-between;
+    position: relative;       /* needed for absolute buttons */
     margin-top: 30px;
-    height: 60px; /* enough for vertical movement */
+    height: 100px;            /* enough vertical space for movement */
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Yes button fixed left */
+#yes-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* No button moves */
+#no-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .btn {
@@ -39,19 +62,10 @@ h1 {
     text-decoration: none;
     font-size: 20px;
     border-radius: 10px;
-    transition: 0.3s;
     cursor: pointer;
-    position: relative; /* for transform to work */
+    transition: 0.3s;
 }
 
 .btn:hover {
     background-color: #ff1a3c;
-}
-
-/* specific for No button */
-#no-btn {
-    position: absolute;
-    top: 0;
-    left: 50%; /* starting position */
-    transform: translate(0, 0);
 }
