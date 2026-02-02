@@ -30,27 +30,28 @@ p {
 
 /* Button container */
 .button-container {
-    position: relative;
+    position: relative;        /* container for No button movement */
+    display: flex;             /* flex for Yes button */
+    align-items: center;       /* vertical centering */
+    justify-content: flex-start; /* start from left, not spaced to edges */
+    padding: 0 20px;           /* inset both sides for visual balance */
     margin-top: 30px;
-    height: 100px;       /* enough for vertical movement */
-    width: 100%;
+    height: 100px;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #yes-btn {
-    position: absolute;
-    left: 20px;          /* inset from left edge */
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;        /* stays in flow, flex will handle positioning */
+    margin-right: auto;        /* pushes No away */
 }
 
 #no-btn {
-    position: absolute;
-    right: 20px;         /* inset from right edge */
+    position: absolute;        /* allows JS to move it freely */
     top: 50%;
-    transform: translateY(-50%);
+    left: 0;
+    transform: translate(0, -50%);
 }
 
 .btn {
@@ -64,8 +65,10 @@ p {
     transition: 0.3s;
 }
 
+
 .btn:hover {
     background-color: #ff1a3c;
 }
+
 
 
